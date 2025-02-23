@@ -1,0 +1,59 @@
+/* chat.css */
+Screen {
+    layout: vertical;
+}
+
+Header {
+    height: 3;
+    dock: top;
+    background: #1e1e1e;
+    color: #ffffff;
+}
+
+Footer {
+    height: 3;
+    dock: bottom;
+    background: #1e1e1e;
+    color: #ffffff;
+}
+
+Horizontal#main_container {
+    height: 1fr;
+    width: 100%;
+}
+
+VerticalScroll#input_agents {
+    width: 1fr;
+    border-right: solid #5a5a5a;
+    background: #2e2e2e;
+    padding: 1;
+}
+
+VerticalScroll#chat_agents {
+    width: 1fr;
+    border-left: solid #5a5a5a;
+    background: #2e2e2e;
+    padding: 1;
+}
+
+Input {
+    height: 3;
+    background: #4a4a4a;
+    color: #ffffff;
+    border: solid #5a5a5a;
+    padding: 0 1;
+}
+
+Static {
+    padding: 1 2;
+    color: #ffffff;
+}
+
+Input#input {
+    dock: bottom;
+    height: 3;
+    background: #4a4a4a;
+    color: #ffffff;
+    border: solid #5a5a5a;
+    padding: 0 1;
+}
