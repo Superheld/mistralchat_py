@@ -1,4 +1,4 @@
-# ui.py
+    # ui.py
 from textual.app import App, ComposeResult
 from textual.widgets import Header, Footer, Input, Static
 from textual.containers import VerticalScroll, Horizontal
@@ -18,6 +18,18 @@ class ChatApp(App):
         self.response_widget = None  # Zum Speichern des Antwort-Widgets
 
     def compose(self) -> ComposeResult:
+
+        # Beispiel-Liste von agent_ids
+        agent_ids = [
+            "ag:5012507f:20250223:pythonagent:6789919e", 
+            "ag:5012507f:20250222:testagent:825aaefe", 
+            "ag:5012507f:20250219:gql1:4172857b"
+        ]
+
+        # Erstelle eine Dropdown-Liste mit den agent_ids
+        dropdown = Select(((agent_id, agent_id) for agent_id in agent_ids), prompt="Wähle eine Agent-ID")
+
+
         # Layout der Anwendung definieren
         yield Header()  # Kopfzeile
         yield Footer()  # Fußzeile
@@ -92,7 +104,7 @@ class ChatApp(App):
             "presence_penalty": self.query_one("#presence_penalty").value,
             "frequency_penalty": self.query_one("#frequency_penalty").value,
             "n": self.query_one("#n").value,
-            # "prediction": self.query_one("#prediction").value,
+            "prediction": self.query_one("#prediction").value,
             "agent_id": self.query_one("#agent_id").value,
             "content": user_input  # Benutzereingabe hinzufügen
         }
