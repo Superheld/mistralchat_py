@@ -1,7 +1,7 @@
 from ui import ChatApp
 
 def main():
-    api_key = "jdPpFGIGPxddyd7S1OuWj4wLdVsY8SQI"
+    api_key = "alt ;-)"
     model = "ministral-8b-latest"
     app = ChatApp(api_key, model)
     app.run()
